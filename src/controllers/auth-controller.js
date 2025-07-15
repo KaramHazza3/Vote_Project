@@ -11,6 +11,10 @@ export const renderLogin = (req, res) => {
   });
 };
 
+export const print1 = () => {
+console.log(1);
+}
+
 export const renderSignUp = (req, res) => {
   return res.render("auth/signup", {
     title: "Sign Up",
@@ -21,6 +25,7 @@ export const renderSignUp = (req, res) => {
 
 export const registerController = async (req, res) => {
   const { username, email, password, password2 } = req.body;
+  console.log(username,email);
   try {
     await createUser(username, email, password, password2);
     return res.redirect("/auth/login");

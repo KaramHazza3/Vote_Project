@@ -11,10 +11,6 @@ export const renderLogin = (req, res) => {
   });
 };
 
-export const print1 = () => {
-console.log(1);
-}
-
 export const renderSignUp = (req, res) => {
   return res.render("auth/signup", {
     title: "Sign Up",

@@ -1,5 +1,8 @@
 import { createUser, loginUser } from "../../src/services/user-services.js";
 
+export const print3 = () => {
+  console.log(3);
+};
 export const renderLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/");
